@@ -12,6 +12,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "build:styles": "postcss src/tailwind.css -o src/styles.css",
+    "prebuild": "yarn build:styles",
+    "prestart": "yarn build:styles",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "9.0.0",
+    "postcss-cli": "^8.2.0",
+    "tailwindcss": "^1.9.6"
   }
 }
